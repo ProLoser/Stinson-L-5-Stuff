@@ -1,14 +1,15 @@
 <div class="emails form">
 <?php echo $this->Form->create('Email');?>
 	<fieldset>
- 		<legend><?php printf(__('Add %s', true), __('Email', true)); ?></legend>
+ 		<legend>Contact Me</legend>
+		<p class="red">Fields with a star * are required</p>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');
 		echo $this->Form->input('phone');
 		echo $this->Form->input('subject');
 		echo $this->Form->input('message');
-		echo $this->Form->input('Item', array('selected' => $id));
+		echo $this->Form->input('Item', array('label' => 'Items of interest'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>

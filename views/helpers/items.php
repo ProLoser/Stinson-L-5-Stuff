@@ -1,6 +1,9 @@
 <?php
 class ItemsHelper extends AppHelper {
-	var $helpers = array('Html');
+	var $helpers = array(
+		'Html', 
+		'UploadPack.Upload'
+	);
 	
 	function listing($items) {
 		$output = '<ul class="items">';
@@ -17,7 +20,7 @@ class ItemsHelper extends AppHelper {
 			$output .= '<li' . $class . '>' . $this->inquire($item['id'])
 				. '<h4>' . $this->Html->link($item['name'], 
 				array('controller' => 'items', 'action' => 'view', $item['id'], Inflector::slug($item['name'])))
-				. '</h4>' . $this->Html->image($item['picture_file_name']);
+				. '</h4>' . $this->image($item);
 			if (isset($item['Category'])) {
 				$output .= '<p class="category">' . $this->Html->link($item['Category']['name'], 
 					array('controller' => 'categories', 'action' => 'view', $item['Category']['id'], Inflector::slug($item['Category']['name']))) . '</p>';
@@ -33,6 +36,15 @@ class ItemsHelper extends AppHelper {
 	
 	function inquire($itemId) {
 		return $this->Html->link('Inquire', array('controller' => 'emails', 'action' => 'index', $itemId), array('class' => 'inquire'));
+	}
+	
+
+	function image($row, $full = true) {
+		$result = $this->Upload->image($row, 'Item.picture', 'thumb');
+		if ($full) {
+			$result = $this->Html->link($result, $this->Upload->url($row, 'Item.picture', 'original', false), array('class' => 'js-dialog', 'escape' => false));
+		}
+		return $result;
 	}
 }
 ?>

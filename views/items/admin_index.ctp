@@ -4,8 +4,6 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('name');?></th>
-			<th><?php echo $this->Paginator->sort('description');?></th>
-			<th><?php echo $this->Paginator->sort('picture_file_name');?></th>
 			<th><?php echo $this->Paginator->sort('price');?></th>
 			<th><?php echo $this->Paginator->sort('category_id');?></th>
 			<th class="actions"><?php __('Actions');?></th>
@@ -21,8 +19,6 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $item['Item']['id']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['name']; ?>&nbsp;</td>
-		<td><?php echo $item['Item']['description']; ?>&nbsp;</td>
-		<td><?php echo $item['Item']['picture_file_name']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['price']; ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?>

@@ -27,6 +27,12 @@ class Email extends AppModel {
 				'message' => 'Please enter a subject',
 			),
 		),
+		'message' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => 'Please enter a message',
+			),
+		),
 	);
 
 	var $hasAndBelongsToMany = array(

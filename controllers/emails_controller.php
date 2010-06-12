@@ -23,8 +23,11 @@ class EmailsController extends AppController {
 				$this->Session->setFlash(__('Please correct the following errors', true));
 			}
 		}
+		if (isset($id)) {
+			$this->data['Item']['Item'] = explode(',', $id);
+		}
 		$items = $this->Email->Item->find('list');
-		$this->set(compact('items', 'id'));
+		$this->set(compact('items'));
 	}
 
 	function admin_index() {

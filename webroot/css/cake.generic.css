@@ -207,7 +207,7 @@ div.paging span a {
 dl {
 	line-height: 2em;
 	margin: 0em 0em;
-	width: 60%;
+	width: 100%;
 }
 dl .altrow {
 	background: #f4f4f4;
@@ -379,6 +379,10 @@ p.error em {
 .success {
 	background: green;
 	color: #fff;
+}
+.red {
+	color: #e32;
+	padding: 0.8em;
 }
 
 /**  Actions  **/

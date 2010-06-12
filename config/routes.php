@@ -28,6 +28,7 @@
  * to use (in this case, /app/views/pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'categories', 'action' => 'index'));
+	Router::connect('/email/*', array('controller' => 'emails', 'action' => 'index'));
 	Router::connect('/admin', array('admin' => true, 'controller' => 'items', 'action' => 'index'));
 
 /**
