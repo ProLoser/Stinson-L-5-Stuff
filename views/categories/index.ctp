@@ -8,7 +8,9 @@
 			$class = ' class="altrow"';
 		}
 	?>
-	<h4<?php echo $class;?>><?php echo $this->Html->link($category['Category']['name'], array('action' => 'view', $category['Category']['id'], Inflector::slug($category['Category']['name']))); ?></h4>
-	<p><?php echo $category['Category']['description']; ?>&nbsp;</p>
+	<li<?php echo $class;?>>
+		<h4><?php echo $this->Html->link($category['Category']['name'], array('action' => 'view', $category['Category']['id'], Inflector::slug($category['Category']['name']))); ?></h4>
+		<p><?php echo $category['Category']['description']; ?>&nbsp;</p>
+	</li>
 <?php endforeach; ?>
 </div>

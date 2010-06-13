@@ -11,11 +11,13 @@ class EmailsController extends AppController {
 				$this->Email->to = Configure::read('CONTACT_EMAIL');
 				$this->Email->replyTo = $this->data['Emailer']['email'];
 				$this->Email->from = $this->data['Emailer']['name'].' <'.$this->data['Emailer']['email'].'>';
-				$this->Email->subject = 'Emailer Form: '.$this->data['Emailer']['subject'];
-				//$this->Email->delivery = 'debug';
-				if ($this->Email->send($this->data['Emailer']['message'])) {
+				$this->Email->subject = 'Stinson L-5 Stuff: '.$this->data['Emailer']['subject'];
+				$this->Email->template = 'contact';
+				$this->loadModel('Item');
+				$this->set('items', $this->Item->find('list'));
+				if ($this->Email->send($this->data)) {
 					$this->Session->setFlash('Thank you for contacting us');
-					//$this->redirect('/');
+					$this->redirect('/');
 				} else {
 					$this->Session->setFlash(__('There was an error sending your email. Please try again in a few minutes.', true));
 				}

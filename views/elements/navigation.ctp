@@ -1,8 +1,5 @@
-<div class="actions">
-	<h3><?php __('Navigation'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link('Items', array('controller' => 'items', 'action' => 'index'));?></li>
-		<li><?php echo $this->Html->link('Categories', array('controller' => 'categories', 'action' => 'index'));?></li>
-		<li><?php echo $this->Html->link('Contact Me', array('controller' => 'emails', 'action' => 'index'));?></li>
-	</ul>
-</div>
+<ul class="navigation">
+	<li><?php echo $this->Html->link('Items', array('controller' => 'items', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Categories', array('controller' => 'categories', 'action' => 'index'));?></li>
+	<li><?php echo $this->Html->link('Contact Me', array('controller' => 'emails', 'action' => 'index'));?></li>
+</ul>

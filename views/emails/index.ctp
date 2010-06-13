@@ -2,7 +2,6 @@
 <?php echo $this->Form->create('Email');?>
 	<fieldset>
  		<legend>Contact Me</legend>
-		<p class="red">Fields with a star * are required</p>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');

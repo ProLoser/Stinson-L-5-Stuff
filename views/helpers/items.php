@@ -42,7 +42,7 @@ class ItemsHelper extends AppHelper {
 	function image($row, $full = true) {
 		$result = $this->Upload->image($row, 'Item.picture', 'thumb');
 		if ($full) {
-			$result = $this->Html->link($result, $this->Upload->url($row, 'Item.picture', 'original', false), array('class' => 'js-dialog', 'escape' => false));
+			$result = $this->Html->link($result, $this->Upload->url($row, 'Item.picture', 'original', false), array('class' => 'js-litebox', 'escape' => false));
 		}
 		return $result;
 	}

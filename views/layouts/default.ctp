@@ -30,10 +30,14 @@
 
 		echo $this->Html->css(array(
 			'cake.generic',
+			'/js/fancybox/jquery.fancybox-1.3.1'
 		));
 		
 		echo $this->Html->script(array(
 			'jquery.min',
+			'fancybox/jquery.mousewheel-3.0.2.pack',
+			'fancybox/jquery.easing-1.3.pack',
+			'fancybox/jquery.fancybox-1.3.1.pack',
 			'plugins',
 		));
 
@@ -44,12 +48,13 @@
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link(__('Stinson L-5 Stuff', true), '/'); ?></h1>
+			<?php echo $this->element('navigation');?>
 		</div>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>
 
-			<?php echo $this->element('navigation');?>
+			<?php echo $this->element('categories');?>
 
 			<?php echo $content_for_layout; ?>
 

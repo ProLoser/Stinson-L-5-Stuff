@@ -20,6 +20,10 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+/***** CUSTOM CONFIGURATION OPTIONS ******/
+Configure::write('CONTACT_EMAIL', 'medium');
+
+
 /**
  * CakePHP Debug Level:
  *
@@ -168,7 +172,7 @@
 /**
  * The name of CakePHP's session cookie.
  */
-	Configure::write('Session.cookie', 'CAKEPHP');
+	Configure::write('Session.cookie', 'STINSONL5STUFF');
 
 /**
  * Session time out time (in seconds).

@@ -48,7 +48,8 @@ h1, h2, h3, h4 {
 h1 {
 	background:#fff;
 	color: #003d4c;
-	font-size: 100%;
+	font-size: 200%;
+	float: left;
 }
 h2 {
 	background:#fff;
@@ -72,6 +73,7 @@ ul, li {
 /** Layout **/
 #container {
 	text-align: left;
+	min-width: 755px;
 }
 
 #header{
@@ -93,6 +95,17 @@ ul, li {
 	color: #fff;
 	background: #003d4c;
 	text-decoration: underline;
+}
+#header .navigation li {
+	display: inline;
+}
+#header .navigation li a {
+	color: #ccc;
+	text-decoration: none;
+	font-size: 120%;
+}
+#header .navigation li a:hover {
+	color: #367889;
 }
 #content{
 	background: #fff;
@@ -578,4 +591,22 @@ ul.items h4 {
 }
 .inquire:hover {
 	background-image: url(../img/email_pencil_64.png);
+}
+
+/** Contact Form **/
+.emails div {
+	margin: 2px;
+	font-size: 90%;
+}
+.emails .text label {
+	float: left;
+	width: 80px;
+	text-align: right;
+	margin-right: 15px;
+}
+.emails textarea {
+}
+.emails .text input {
+	width: 75%;
+	padding: 0;
 }

@@ -50,6 +50,9 @@ class AppController extends Controller {
 		function beforeRender() {
 			if ($this->_prefix()) {
 				$this->layout = 'admin';
+			} else {
+				$this->loadModel('Category');
+				$this->set('navCategories',$this->Category->find('list'));
 			}
 		}
 
