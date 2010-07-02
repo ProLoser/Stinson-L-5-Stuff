@@ -1,0 +1,273 @@
+--HELP FILE TEMPLATE--
+
+BlueGlow SIte Template
+Created: 23/07/2009
+By: Gabi Schiopu	
+Contact Info: gabi.schiopu@extendio.ro
+
+Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email, via my user page contact form. Thanks so much!
+
+--TABLE OF CONTENTS--
+
+A) HTML Structure 
+B) CSS Files
+C) Javascript 
+D) PSD Files
+
+----------------------------------------------------------------------------------------------------------
+
+A) HTML Structure
+
+This theme is a fixed layout with two columns and a bottom container. All of the information within the main content area is nested within a div with id "colLeft". The sidebar's (right column) content is within a div with id "colRight", except the homepage where the structure is different. The div with id "content" keeps toghether all the content between the "header" and "footer".
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+B) CSS
+
+I'm using three CSS files in this theme. The first one "ie7.css" it is used to make the class "clearfix" work properly in IE7. This style is applied through the conditional statment in the "head" of each file.
+
+The lightbox css file "jquery.lightbox-0.5.css".
+
+The main "style.css" file contains all of the specific stylings for the page. The file is separated into sections using:  
+
+"/* MAIN STYLES
+-------------------------------------------*/
+
+This sections hold the general styles, behaviours through the site for general elements like Body, Headings, A, UL, etc.
+
+"* { margin: 0; padding: 0; }
+
+body,html {
+	font-weight:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#444;
+	margin:0;
+	padding:0;
+	background:#000 url(../images/bk_body.jpg) 50% 0 no-repeat;
+	line-height:130%;
+}
+
+ul {
+	list-style:none;
+}
+
+a {
+	color:#119EC8;
+}
+
+....... etc"
+
+
+/* LAYOUT STRUCTURE
+-------------------------------------------*/
+
+In this section the main blocks positioning and some of the main characteristics are defined.
+
+"#wrapper {
+	margin:35px auto 0;
+	width:960px;
+	background:#fff url(../images/bk_wrapper.jpg) 0 0 no-repeat;
+	padding-bottom:1px;
+}
+
+
+#header {
+	height:100px;
+	position:relative;
+	border-bottom:1px solid #E2E2E2;
+	background:url(../images/bk_header.jpg) 0 100% repeat-x;
+}
+
+.......... etc"
+
+
+/* HEADER ELEMENTS
+-------------------------------------------*/
+
+This sections containd the definitions for Header element styles like, Logo, Top menu, header tagline etc.
+
+"/* -- logo --*/
+#logo {
+	position:absolute;
+	top:30px;
+	left:20px;
+	
+}
+
+#logo h1 {
+	padding:0;
+	background:none;
+	border:none;
+}
+
+-------- etc"
+
+
+/* CONTENT
+-------------------------------------------*/
+
+This sectiones contains style for all kind of elements of the "content" area, including the definitions for the columns styles, "colLeft", "colRight" and the ones within.
+So, for any elements between Header and Footer look for this section title and scroll to the element you are looking for.
+
+"#latestPostsHome {
+	display:block;
+}
+
+#latestPostsHome li {
+	display:block;
+	float:left;
+	background:#FBFBFB url(../images/bk_latest_box.jpg) 0 100% repeat-x;
+	border:1px solid #DDD;
+	padding:10px;
+"
+
+............ etc"
+
+
+/* HOME SLIDER
+-----------------------------------------------*/
+
+This contains the style for the Homepage jQuery slider elements. It works toghether with Carousel styles
+
+"#slider {
+	padding-bottom:20px;
+	margin-top:20px;
+}
+
+* html #slider {
+	padding-bottom:0;
+}
+
+#sliderFold {
+	width:305px;
+	padding:0;
+	float:left;
+}
+
+................ etc"
+
+
+/* CAROUSEL
+---------------------------------------------*/
+
+This contains the style for the Homepage jQuery Carousel.
+
+
+".stepcarousel{
+	float:left;
+	position: relative; /*leave this value alone*/
+	overflow: hidden; /*leave this value alone*/
+	width: 600px; /*Width of Carousel Viewer itself*/
+
+...............etc"
+
+
+/* FORMS
+---------------------------------------------*/
+
+Search & Contact form styles
+
+"topSearch {
+	position:absolute;
+	top:27px;
+	right:20px;
+}
+
+#topSearch input#q {
+	width:195px;
+	background:url(../images
+
+...........etc"
+
+
+
+/* CLEARING
+---------------------------------------------------*/
+
+Clearing styles are defined.
+
+".clearfix:after {
+    content: "."; 
+    display:block; 
+    height: 0; 
+
+............ etc "
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+C) Javascript
+
+This theme imports 4 Javascript files.
+
+  1) jquery-1.3.2.min.js
+  2) stepcarousel.js (for homepage slider)
+  3) supersleight-min.js ( IE6 PNG transparency ) - loaded through a conditional statement in "head" tag.
+  4) jquery.lightbox-0.5.min.js - lightbox main js file
+  5) jquery.form.js - contact page ajax form submission.
+
+1) jQuery is a Javascript library that greatly reduces the amount of code that you must write. 
+
+2) stepcarousel.js - the script file for the Homepage Carousel. Please remember that the carousel is set and initialized at the bottom of the homepage through this code, commented as <!-- slider setup -->:
+
+"stepcarousel.setup({
+				galleryid: 'slider', //id of carousel DIV
+				beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+				panelclass: 'panel', //class of panel DIVs each holding content
+				autostep: {enable:true, moveby:1, pause:5000},
+				panelbehavior: {speed:500, wraparound:false, persist:true},
+				defaultbuttons: {enable: false, moveby: 1, leftnav: ['', 450, 282], rightnav: ['', -35, 282]},
+				statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+				onslide:function(){ select_icon(statusA); },
+				contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+				})
+			
+			<"
+
+ Also at the bottom of home file there is a custom fucntion defined to work with the Carousel and create the custom slider effect, with the clickable areas of Services.
+
+"function select_icon(q){					
+		for(i=1;i<5 ;i++)
+		{
+		 if(i==q)
+ ....... etc"
+
+
+3) Is he the scripts used for IE6 PNG transparency fix. The script is called through a <head> conditional statement for IE6.
+
+"<!--[if lte IE 6]>
+	 <script type="text/javascript" src="js/supersleight-min.js"></script>
+ <![endif]-->"
+
+This script is free and you can find out more about it at "http://24ways.org/2007/supersleight-transparent-png-in-ie6".
+
+4) The lightbox script file. The lightbox is used on the Portfolio page. In order to be functional it initialize using the small piece of code defined in <head>
+
+<script type="text/javascript">
+    $(function() {
+       $('a.lightbox').lightBox();
+    });
+ </script>
+
+5) Ajax contact form. The page also uses the file "sendmail.php". 
+   In order to set up the form to be sent to your email you need to change in sendmail.php, at this code, line 12:
+	
+	$to = "youremail@youremail.com"; 
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+D) PSD Files
+
+There is a homepage PSD included, that contains all the graphic elements needed for a further edit. This template was designed usinf Fireworks and exported as PSD, this is why the PSD is not organized with named layers, grouped layers etc. Even so i dont think ther ewould be a problem to edit the elements in case you want this. I also included the Fireworks editable source files.
+
+The logo font is Rockwell.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section. 
+
+Gabi Schiopu

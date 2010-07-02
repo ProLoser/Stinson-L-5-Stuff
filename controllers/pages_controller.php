@@ -11,27 +11,27 @@ class PagesController extends AppController {
 	 * @param mixed What page to display
 	 * @access public
 	 */
-		function index() {
-			$path = func_get_args();
+	function index() {
+		$path = func_get_args();
 
-			$count = count($path);
-			if (!$count) {
-				$this->redirect('/');
-			}
-			$page = $subpage = $title = null;
-
-			if (!empty($path[0])) {
-				$page = $path[0];
-			}
-			if (!empty($path[1])) {
-				$subpage = $path[1];
-			}
-			if (!empty($path[$count - 1])) {
-				$title = Inflector::humanize($path[$count - 1]);
-			}
-			$this->set(compact('page', 'subpage', 'title'));
-			$this->render(implode('/', $path));
+		$count = count($path);
+		if (!$count) {
+			$this->redirect('/');
 		}
+		$page = $subpage = $title = null;
+
+		if (!empty($path[0])) {
+			$page = $path[0];
+		}
+		if (!empty($path[1])) {
+			$subpage = $path[1];
+		}
+		if (!empty($path[$count - 1])) {
+			$title = Inflector::humanize($path[$count - 1]);
+		}
+		$this->set(compact('page', 'subpage', 'title'));
+		$this->render(implode('/', $path));
+	}
 
 	function view($id = null) {
 		if (!$id) {

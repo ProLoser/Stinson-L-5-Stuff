@@ -1,5 +1,3 @@
-<div class="categories view">
-	<h2><?php echo $category['Category']['name']; ?></h2>
-	<p><?php echo $category['Category']['description']; ?></p>
-	<?php echo $this->Items->listing($category['Item']);?>
-</div>
+<?php $this->set('title_for_layout', $category['Category']['name']);?>
+<p><?php echo $category['Category']['description']; ?></p>
+<?php echo $this->Items->listing($category['Item']);?>

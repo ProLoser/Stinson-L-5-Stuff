@@ -1,4 +1,2 @@
-<div class="items index">
-	<h2><?php __('Items');?></h2>
-	<?php echo $this->Items->listing($items);?>
-</div>
+<?php $this->set('title_for_layout', __('Items', true));?>
+<?php echo $this->Items->listing($items);?>

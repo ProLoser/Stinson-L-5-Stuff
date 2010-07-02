@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>BlueGlow Site Template</title>
+ <!--[if gte IE 7]>
+    <link rel="stylesheet" media="screen" type="text/css" href="css/ie7.css" />
+    <![endif]-->
+<!--[if lte IE 6]>
+	 <script type="text/javascript" src="js/supersleight-min.js"></script>
+ <![endif]-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/stepcarousel.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+       $('a.lightbox').lightBox();
+    });
+ </script>
+
+</head>
+
+<body>
+<!-- begin wrapper -->
+<div id="wrapper">
+	<!-- begin header -->
+	<div id="header">
+		<div id="logo"><h1><a href="/">BlueGlow</a></h1></div>
+		<ul id="topMenu">
+			<li class="selected"><a href="#">home</a></li>
+			<li><a href="about.html">about us</a></li>
+			<li><a href="services.html">services</a></li>
+			<li><a href="portfolio.html">our work</a></li>
+			<li><a href="blog.html">blog</a></li>
+			<li><a href="contact.html">contact</a></li>
+		</ul>
+		<form id="topSearch" action="" method="post">
+			<input type="text" id="q" name="q" value="search in site" onclick="this.value='';" onblur="this.value='search in site';"/>
+			<input type="submit" value="" class="submit" />
+		</form>
+	</div>
+	<!-- end header -->
+	
+	<!-- begin content -->
+	<div id="content" class="clearfix">
+	
+	<!-- home slider -->
+	<div id="slider">
+		<div id="sliderFold">
+		  <div id="service_1" class="sliderItem" onclick="stepcarousel.stepTo('slider', 1);select_icon(1);">
+		  	<img src="images/ico_serv1.jpg" alt="Service1" />
+		  	<h2>Service1 Name</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+		  </div>
+	      <div id="service_2" class="sliderItem" onclick="stepcarousel.stepTo('slider', 2);select_icon(2);">
+		  <img src="images/ico_serv2.jpg" alt="Service2" />
+		  <h2>Service2 Name</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+		</div>
+		  <div id="service_3" class="sliderItem" onclick="stepcarousel.stepTo('slider', 3);select_icon(3);" >
+		  <img src="images/ico_serv3.jpg" alt="Service3" />
+		  <h2>Service3 Name</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+		  </div>
+		  <div id="service_4" class="sliderItemOn" onclick="stepcarousel.stepTo('slider', 4);select_icon(4);" >
+		  <img src="images/ico_serv4.jpg" alt="Service4" />
+		  <h2>Service4 Name</h2>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+		  </div>
+	</div>
+	
+	<div class="sliderImg">
+	<div class="stepcarousel">
+		<div class="belt">
+			<div class="panel">
+				<img src="images/sample2_slider.jpg" alt="project name" /><br />
+				<p class="projName">Rockable card</p>
+				<a href="portfolio.html" class="butDetails">See project details</a>
+			</div>
+			<div class="panel">
+				<img src="images/sample1_slider.jpg" alt="project name" /><br />
+				<p class="projName">Shopify-themes.net</p>
+				<a href="portfolio.html" class="butDetails">See project details</a>
+			</div>
+			<div class="panel">
+				<img src="images/sample3_slider.jpg" alt="project name" /><br />
+				<p class="projName">BlueLeather WP Theme</p>
+				<a href="portfolio.html" class="butDetails">See project details</a>
+			</div>
+			<div class="panel">
+				<img src="images/sample4_slider.jpg" alt="project name" /><br />
+				<p class="projName">Stylemixfolio WP Theme</p>
+				<a href="portfolio.html" class="butDetails">See project details</a>
+			</div>
+	
+		</div>
+		</div> 
+	</div>
+	</div>
+	<!-- end home slider -->
+	
+	
+		<h2>Latest Blog Posts</h2>
+
+		<ul id="latestPostsHome">
+			<li>
+				<h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+				<p><img src="images/sample_home_post.jpg" alt=""/>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+				<span><img src="images/ico_post_home.jpg" alt="Posted on"/> April 23, 2009 
+				&nbsp;&nbsp;<img src="images/ico_comments_home.jpg" alt="Comments" /> 2 comments</span>
+				<a href="#" class="readmore">read more</a>
+			</li>
+			<li><h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+				<p><img src="images/sample_home_post.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+				<span><img src="images/ico_post_home.jpg" alt="Posted on"/> April 23, 2009 
+				&nbsp;&nbsp;<img src="images/ico_comments_home.jpg" alt="Comments" /> 2 comments</span>
+				<a href="#" class="readmore">read more</a>
+				</li>
+			<li style="margin-right:0px;"><h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+				<p><img src="images/sample_home_post.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+				<span><img src="images/ico_post_home.jpg" alt="Posted on"/> April 23, 2009 
+				&nbsp;&nbsp;<img src="images/ico_comments_home.jpg" alt="Comments" /> 2 comments</span>
+				<a href="#" class="readmore">read more</a>
+				</li>
+		</ul>
+
+		<ul id="homeColumns">
+			<li>
+				<h2 class="home">Featured Project</h2>
+				<p><img src="images/sample_featured_proj.jpg" alt="Featured Project" /></p>
+				<p><strong><a href="#">Featured Project Name</a></strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+			</li>
+			<li>
+				<h2 class="home">About Us</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+				<p><strong>Find out more about our <a href="#">Services</a> or take a closer look at our <a href="#">Portfolio</a>.</strong></p>
+			</li>
+		  <li class="last contact">
+				<h2 class="home">Get in touch</h2>
+			  <p>We will be happy to hear from you, no matter the subject. For contacting us please use our <a href="#">contact page</a> or the info bellow.</p>
+			  <p><strong>Phone:</strong> +123456789<br />
+				<strong>Mobile:</strong> +123456789<br /></p>
+				<p><strong>Email:</strong> <a href="mailto:#">office[at]blueglow[dot]com</a></p>
+			    <a href="#"><img src="images/twitter.jpg" alt="Follow us on Twitter" border="0" /></a>  </li>
+		</ul>
+	
+	</div>
+	<!-- end content -->
+	
+</div>
+<!-- end wrapper -->
+
+<!-- begin footer -->
+	<div id="footer">
+		© 2009 BlueGlow.com. All Right Reserved.
+ 		<img src="images/footer_mark.gif" alt="" class="footerMark"/>
+	</div>
+
+<!-- end footer -->
+
+<!-- slider setup -->
+<script type="text/javascript" language="javascript">
+<!--//<![CDATA[
+			stepcarousel.setup({
+				galleryid: 'slider', //id of carousel DIV
+				beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+				panelclass: 'panel', //class of panel DIVs each holding content
+				autostep: {enable:true, moveby:1, pause:5000},
+				panelbehavior: {speed:500, wraparound:false, persist:true},
+				defaultbuttons: {enable: false, moveby: 1, leftnav: ['', 450, 282], rightnav: ['', -35, 282]},
+				statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+				onslide:function(){ select_icon(statusA); },
+				contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+				})
+				function select_icon(q){					
+					for(i=1;i<5 ;i++)
+					{
+					  if(i==q)
+					  {
+					  	$("#service_" + i).removeClass("sliderItem");
+						$("#service_" + i).addClass("sliderItemOn");
+						if(i=="1"){
+							$("#service_" + i).addClass("sliderItemOnFirst");
+						}
+						
+					  }
+					  else
+					  {
+					  	if(i=="1"){
+							$("#service_" + i).removeClass("sliderItemOnFirst");
+						}
+					  	$("#service_" + i).removeClass("sliderItemOn");
+						$('#service_'+i).addClass("sliderItem");
+						
+					  }
+					}
+				}
+	//]]>-->
+
+	</script>
+
+			
+			
+
+</body>
+</html>

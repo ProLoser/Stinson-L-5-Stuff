@@ -5,9 +5,22 @@ class ItemsHelper extends AppHelper {
 		'UploadPack.Upload'
 	);
 	
+	/*
+	* 
+	* <div class="serviceColLeft" >
+		<?php echo $this->Html->image('ico_serv1.jpg', array('alt' => 'Service1'))?><h2>Service 1</h2>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		<h3>Related projects</h3>
+		<ul>
+			<li><a href="#">Project name</a></li>
+			<li><a href="#">Project name</a></li>
+			<li><a href="#">Project name</a></li>
+		</ul>
+	</div>
+	*/
 	function listing($items) {
-		$output = '<ul class="items">';
 		$i = 0;
+		$output = '';
 		foreach ($items as $item){
 			$class = null;
 			if (isset($item['Item'])) {
@@ -15,21 +28,32 @@ class ItemsHelper extends AppHelper {
 				unset($item['Item']);
 			}
 			if ($i++ % 2 == 0) {
-				$class = ' class="altrow"';
+				$class = 'serviceColLeft';
+			} else {
+				$class = 'serviceColRight';
 			}
-			$output .= '<li' . $class . '>' . $this->inquire($item['id'])
-				. '<h4>' . $this->Html->link($item['name'], 
-				array('controller' => 'items', 'action' => 'view', $item['id'], Inflector::slug($item['name'])))
-				. '</h4>' . $this->image($item);
+			$output .= '<div class="' . $class . '">'
+				. $this->image($item) . '<h2>'
+				. $this->Html->link($item['name'], 
+					array('controller' => 'items', 'action' => 'view', $item['id'], Inflector::slug($item['name']))) . '</h2>';
+			$output .= '<p class="clearfix">' . $item['description'] . '</p><h3>Details</h3><ul>';
+			if ($item['price']) {
+				$output .= '<li><b>Price:</b> $' . $item['price'] . '</li>';
+			} else {
+				$output .= '<li><b>Price:</b> Price to be Negotiated</li>';
+			}
 			if (isset($item['Category'])) {
-				$output .= '<p class="category">' . $this->Html->link($item['Category']['name'], 
-					array('controller' => 'categories', 'action' => 'view', $item['Category']['id'], Inflector::slug($item['Category']['name']))) . '</p>';
+				$output .= '<li><b>Category:</b> ' . $this->Html->link($item['Category']['name'], 
+				array('controller' => 'categories', 'action' => 'view', $item['Category']['id'], Inflector::slug($item['Category']['name']))) . '</li>';	
 			}
-			$output .= '<p class="price">';
-			$output .= (!$item['price']) ? $item['price'] : 'Price to be Negotiated';
-			$output .= '</p><p>' . $item['description'] . '</p></li>';
+			if (!empty($item['make'])) {
+				$output .= '<li><b>Make:</b> ' . $item['make'] . '</li>';	
+			}
+			if (!empty($item['model_number'])) {
+				$output .= '<li><b>Model Number:</b> ' . $item['model_number'] . '</li>';	
+			}
+			$output .= '</ul></div>';
 		}
-		$output .= '</ul>';
 		
 		return $output;
 	}

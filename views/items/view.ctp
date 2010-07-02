@@ -1,32 +1,17 @@
-<div class="items view">
+<?php $this->set('title_for_layout', $item['Item']['name']); ?>
+<div class="viewItem">
+	<?php echo $this->Items->image($item); ?>
 	<?php echo $this->Items->inquire($item['Item']['id'])?>
-	<div style="border:2px solid #000;float:right;margin: 10px;"><?php echo $this->Items->image($item); ?></div>
-	<h2><?php echo $item['Item']['name']; ?></h2>
-	<dl><?php $i = 0; $class = '';?>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Price'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo (!$item['Item']['price']) ? $item['Item']['price'] : 'To be Negotiated'; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Make'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $item['Item']['make']; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Model Number'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $item['Item']['model_number']; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Category'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Description'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $item['Item']['description']; ?>
-			&nbsp;
-		</dd>
-	</dl>
 </div>
+<h2><?php echo ($item['Item']['price']) ? '$' . $item['Item']['price'] : 'To be Negotiated'?></h2>
+<?php echo $item['Item']['description']; ?>
+<h3>Details</h3>
+<ul>
+	<li><b>Category:</b> <?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?></li>
+<?php if (!empty($item['Item']['make'])):?>
+	<li><b>Make:</b> <?php echo $item['Item']['make']; ?></li>
+<?php endif;?>
+<?php if (!empty($item['Item']['model_number'])):?>
+	<li><b>Model Number:</b> <?php echo $item['Item']['model_number']; ?></li>
+<?php endif;?>
+</ul>

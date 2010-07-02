@@ -31,62 +31,64 @@
  * @subpackage    cake.app
  */
 class AppController extends Controller {
+	var $view = 'Theme';
 	var $components = array(
-			'Auth',
-			'Session',
-			'DebugKit.Toolbar',
-		);
-		var $helpers = array(
-			'Form', 
-			'Html',
-			'Session',
-			'Items',
-		);
+		'Auth',
+		'Session',
+		'DebugKit.Toolbar',
+	);
+	var $helpers = array(
+		'Form', 
+		'Html',
+		'Session',
+		'Items',
+	);
 
-		function beforeFilter() {
-			$this->__configureAuth();
+	function beforeFilter() {
+		$this->__configureAuth();
+	}
+
+	function beforeRender() {
+		if ($this->_prefix()) {
+			$this->layout = 'admin';
+		} else {
+			$this->theme = 'blue_glow';
+			$this->loadModel('Category');
+			$this->set('navCategories',$this->Category->find('list'));
+		}
+	}
+
+	/**
+	 * Checks to see what the current prefix in use is. Checks for 'admin' by
+	 * default.
+	 *
+	 * @return boolean
+	 * @access protected
+	 **/
+	function _prefix($prefix = 'admin') {
+		if (isset($this->params['prefix']) && $this->params['prefix'] == $prefix) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Configures the AuthComponent according to the application's settings
+	 *
+	 * @return void
+	 * @access private
+	 */
+	function __configureAuth() {
+		if ($this->_prefix('admin')) {
+			$this->Auth->deny();
+		} else {			
+			$this->Auth->allow();
 		}
 
-		function beforeRender() {
-			if ($this->_prefix()) {
-				$this->layout = 'admin';
-			} else {
-				$this->loadModel('Category');
-				$this->set('navCategories',$this->Category->find('list'));
-			}
-		}
-
-		/**
-		 * Checks to see what the current prefix in use is. Checks for 'admin' by
-		 * default.
-		 *
-		 * @return boolean
-		 * @access protected
-		 **/
-		function _prefix($prefix = 'admin') {
-			if (isset($this->params['prefix']) && $this->params['prefix'] == $prefix) {
-				return true;
-			}
-			return false;
-		}
-
-		/**
-		 * Configures the AuthComponent according to the application's settings
-		 *
-		 * @return void
-		 * @access private
-		 */
-		function __configureAuth() {
-			if ($this->_prefix('admin')) {
-				$this->Auth->deny();
-			} else {			
-				$this->Auth->allow();
-			}
-
-			$this->Auth->fields = array('username' => 'email', 'password' => 'password');
-			$this->Auth->loginAction = array('plugin' => null, 'admin' => false, 'controller' => 'users', 'action' => 'login');
-			$this->Auth->logoutRedirect = '/';
-			$this->Auth->loginRedirect = '/';
-		}
+		$this->Auth->fields = array('username' => 'email', 'password' => 'password');
+		$this->Auth->loginAction = array('plugin' => null, 'admin' => false, 'controller' => 'users', 'action' => 'login');
+		$this->Auth->logoutRedirect = '/';
+		$this->Auth->loginRedirect = '/';
+	}
 }
 ?>
