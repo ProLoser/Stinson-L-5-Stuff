@@ -7,6 +7,8 @@
 		echo $this->Form->input('description');
 		echo $this->Form->input('picture', array('type' => 'file'));
 		echo $this->Form->input('price', array('default' => '0.00'));
+		echo $this->Form->input('make');
+		echo $this->Form->input('model_number');
 		echo $this->Form->input('category_id');
 		echo $this->Form->input('order_weight', array('default' => 0));
 	?>

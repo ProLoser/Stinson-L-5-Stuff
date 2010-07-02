@@ -31,6 +31,16 @@
 			<?php echo $item['Item']['price']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Make'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $item['Item']['make']; ?>
+			&nbsp;
+		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Model Number'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $item['Item']['model_number']; ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Category'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?>

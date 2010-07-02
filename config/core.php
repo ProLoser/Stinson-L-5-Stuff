@@ -21,7 +21,7 @@
  */
 
 /***** CUSTOM CONFIGURATION OPTIONS ******/
-Configure::write('CONTACT_EMAIL', 'medium');
+Configure::write('CONTACT_EMAIL', 'test@example.com');
 
 
 /**
