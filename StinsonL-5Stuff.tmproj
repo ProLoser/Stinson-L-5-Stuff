@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>views/items/admin_view.ctp</string>
+	<string>views/items/view.ctp</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -20,21 +20,77 @@
 			<key>filename</key>
 			<string>.gitignore</string>
 			<key>lastUsed</key>
-			<date>2010-06-10T00:16:40Z</date>
+			<date>2010-07-02T07:40:21Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>216</integer>
 	<key>metaData</key>
 	<dict>
+		<key>app_controller.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>33</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>17</integer>
+		</dict>
 		<key>config/core.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>35</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>config/routes.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>3</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>22</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/elements/navigation.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/elements/sidebar.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>169</integer>
+				<key>line</key>
+				<integer>9</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -46,23 +102,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>views/items/admin_add.ctp</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>63</integer>
-				<key>line</key>
-				<integer>8</integer>
+				<integer>0</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -73,84 +115,163 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>42</integer>
+				<integer>52</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>0</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>63</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>0</integer>
 			</dict>
 		</dict>
-		<key>views/items/admin_edit.ctp</key>
+		<key>views/helpers/items.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
+				<integer>30</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>12</integer>
+		</dict>
+		<key>views/items/index.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>41</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/items/view.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>16</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/pages/about_me.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>43</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/themed/blue_glow/index.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>169</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>156</integer>
+		</dict>
+		<key>views/themed/blue_glow/layouts/default.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
 				<integer>42</integer>
-				<key>line</key>
-				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>26</integer>
 		</dict>
-		<key>views/items/admin_index.ctp</key>
+		<key>views/themed/blue_glow/services.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>53</integer>
+				<integer>0</integer>
 				<key>line</key>
+				<integer>150</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>98</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>6</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>150</integer>
+			</dict>
+		</dict>
+		<key>views/themed/blue_glow/webroot/css/style.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
 				<integer>20</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>2</integer>
-		</dict>
-		<key>views/items/admin_view.ctp</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>65</integer>
 				<key>line</key>
-				<integer>38</integer>
+				<integer>78</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>webroot/css/cake.generic.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>75</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>46</integer>
+			<integer>68</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>webroot/css/cake.generic.css</string>
-		<string>views/emails/index.ctp</string>
+		<string>views/themed/blue_glow/layouts/default.ctp</string>
+		<string>views/themed/blue_glow/webroot/css/style.css</string>
+		<string>views/elements/navigation.ctp</string>
+		<string>config/routes.php</string>
 		<string>config/core.php</string>
-		<string>views/items/admin_add.ctp</string>
-		<string>views/items/admin_edit.ctp</string>
-		<string>views/items/admin_index.ctp</string>
-		<string>views/items/admin_view.ctp</string>
+		<string>app_controller.php</string>
+		<string>views/helpers/items.php</string>
+		<string>views/emails/index.ctp</string>
+		<string>views/pages/about_me.ctp</string>
+		<string>views/elements/sidebar.ctp</string>
+		<string>views/items/view.ctp</string>
+		<string>views/themed/blue_glow/index.html</string>
+		<string>views/items/index.ctp</string>
+		<string>views/themed/blue_glow/services.html</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

@@ -12,27 +12,15 @@ class Category extends AppModel {
 		'order_weight' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				'message' => 'Your custom message here',
+				'message' => 'Order weight must be a positive or negative integer',
 				'allowEmpty' => true,
 			),
 		),
 	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-	var $hasMany = array(
-		'Item' => array(
-			'className' => 'Item',
-			'foreignKey' => 'category_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
+	var $hasAndBelongsToMany = array(
+		'Item',
 	);
 
 }

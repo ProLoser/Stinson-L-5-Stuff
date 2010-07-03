@@ -21,9 +21,7 @@
 <div class="actions">
 	<h3><?php __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(sprintf(__('Edit %s', true), __('Page', true)), array('action' => 'edit', $page['Page']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('Delete %s', true), __('Page', true)), array('action' => 'delete', $page['Page']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $page['Page']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Pages', true)), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Page', true)), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Edit this %s', true), __('Page', true)), array('action' => 'edit', $page['Page']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Delete this %s', true), __('Page', true)), array('action' => 'delete', $page['Page']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $page['Page']['id'])); ?> </li>
 	</ul>
 </div>

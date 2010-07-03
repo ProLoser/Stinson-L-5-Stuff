@@ -9,35 +9,19 @@ class Item extends AppModel {
 				'message' => 'Please enter an item name',
 			),
 		),
-	);
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-	var $belongsTo = array(
-		'Category' => array(
-			'className' => 'Category',
-			'foreignKey' => 'category_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
+		'order_weight' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				'message' => 'Order weight must be a positive or negative integer',
+				'allowEmpty' => true,
+			),
+		),
 	);
 
 	var $hasAndBelongsToMany = array(
-		'Email' => array(
-			'className' => 'Email',
-			'joinTable' => 'emails_items',
-			'foreignKey' => 'item_id',
-			'associationForeignKey' => 'email_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		)
+		'Email',
+		'Category',
+		'Note'
 	);
 	
 	var $actsAs = array(

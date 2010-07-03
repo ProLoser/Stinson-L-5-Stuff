@@ -36,7 +36,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__('Stinson L-5 Stuff', true), '/'); ?> - <?php echo $this->Html->link(__('Admin Panel', true), '/admin'); ?> - <?php echo $this->Html->link(__('Logout', true), array('admin' => false, 'controller' => 'users', 'action' => 'login')); ?></h1>
+			<h1><?php echo $this->Html->link(__('Stinson L-5 Stuff', true), '/'); ?> - <?php echo $this->Html->link(__('Logout', true), array('admin' => false, 'controller' => 'users', 'action' => 'login')); ?></h1>
 		</div>
 		<div id="content">
 

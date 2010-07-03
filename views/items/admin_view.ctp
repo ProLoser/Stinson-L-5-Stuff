@@ -49,16 +49,10 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<h3><?php __('Extra Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(sprintf(__('Edit %s', true), __('Item', true)), array('action' => 'edit', $item['Item']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('Delete %s', true), __('Item', true)), array('action' => 'delete', $item['Item']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $item['Item']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Items', true)), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Item', true)), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Categories', true)), array('controller' => 'categories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Category', true)), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('List %s', true), __('Emails', true)), array('controller' => 'emails', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Email', true)), array('controller' => 'emails', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Edit this %s', true), __('Item', true)), array('action' => 'edit', $item['Item']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Delete this %s', true), __('Item', true)), array('action' => 'delete', $item['Item']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $item['Item']['id'])); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -98,10 +92,4 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(sprintf(__('New %s', true), __('Email', true)), array('controller' => 'emails', 'action' => 'add'));?> </li>
-		</ul>
-	</div>
 </div>

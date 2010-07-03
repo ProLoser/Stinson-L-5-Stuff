@@ -4,7 +4,7 @@ class ItemsController extends AppController {
 	var $name = 'Items';
 
 	function index() {
-		$this->Item->recursive = 0;
+		$this->Item->recursive = 1;
 		$this->set('items', $this->paginate());
 	}
 
@@ -40,8 +40,8 @@ class ItemsController extends AppController {
 			}
 		}
 		$categories = $this->Item->Category->find('list');
-		$emails = $this->Item->Email->find('list');
-		$this->set(compact('categories', 'emails'));
+		$notes = $this->Item->Note->find('list');
+		$this->set(compact('categories', 'notes'));
 	}
 
 	function admin_edit($id = null) {
@@ -61,8 +61,8 @@ class ItemsController extends AppController {
 			$this->data = $this->Item->read(null, $id);
 		}
 		$categories = $this->Item->Category->find('list');
-		$emails = $this->Item->Email->find('list');
-		$this->set(compact('categories', 'emails'));
+		$notes = $this->Item->Note->find('list');
+		$this->set(compact('categories', 'notes'));
 	}
 
 	function admin_delete($id = null) {

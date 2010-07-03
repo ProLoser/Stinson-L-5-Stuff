@@ -534,6 +534,39 @@ span.metadata img {
 	position:relative;
 }
 
+/* TABLES
+--------------------------------------------------*/
+table {
+	width: 100%;
+}
+tr {
+	
+}
+tr.altrow {
+	background: #B7DCF1;;
+}
+table tr:nth-child(2n) td {
+	background: #B7DCF1;
+}
+th {
+	border-bottom: 2px solid #000;
+	padding: 6px;
+	font-size: 130%;
+}
+th a.asc:after {
+	content: ' ⇣';
+}
+th a.desc:after {
+	content: ' ⇡';
+}
+td {
+	padding: 6px;
+	border-bottom:1px solid #ddd;
+}
+td.actions {
+	text-align: center;
+}
+
 
 /* FORMS
 --------------------------------------------------*/
@@ -566,13 +599,13 @@ span.metadata img {
 	float:left;
 }
 
-form#contact label {
+form label {
 	display:block;
 	padding:8px 0 2px;
 	font-weight:bold;
 }
 
-form#contact input, form#contact textarea {
+form input, form textarea {
 	border:1px solid #E5E5E5;
 	padding:5px;
 	font-size:12px;
@@ -581,11 +614,11 @@ form#contact input, form#contact textarea {
 	width:300px;
 }
 
-form#contact textarea, form#contact select {
+form textarea, form select {
 	width:500px;
 }
 
-form#contact input.submit {
+form input.submit {
 	border:none;
 	width:147px;
 	height:40px;

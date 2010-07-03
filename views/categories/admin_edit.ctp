@@ -6,7 +6,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('name');
 		echo $this->Form->input('description');
-		echo $this->Form->input('order_weight');
+		echo $this->Form->input('order_weight', array('default' => 0));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
