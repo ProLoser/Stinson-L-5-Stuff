@@ -7,7 +7,11 @@
 <?php echo $item['Item']['description']; ?>
 <h3>Details</h3>
 <ul>
-	<li><b>Category:</b> <?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?></li>
+	<li><b>Categories:</b> 
+		<ul><?php foreach($item['Category'] as $category):?>
+			<li><?php echo $this->Html->link($category['name'], array('controller' => 'categories', 'action' => 'view', $category['id'])); ?></li>
+		<?php endforeach;?></ul>
+	</li>
 <?php if (!empty($item['Item']['make'])):?>
 	<li><b>Make:</b> <?php echo $item['Item']['make']; ?></li>
 <?php endif;?>

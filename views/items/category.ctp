@@ -1,5 +1,4 @@
-<?php $this->set('title_for_layout', $category['Category']['name']);?>
-<p><?php echo $category['Category']['description']; ?></p>
+<?php $this->set('title_for_layout', 'Category: ' . $category['Category']['name']);?>
 <div class="items index">
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -21,8 +20,8 @@
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link('Read More', array('controller' => 'items', 'action' => 'view', $item['Item']['id']), array('class' => 'readmore')); ?>
-			<?php echo $this->Html->link(__('Inquire', true), array('controller' => 'emails', 'action' => 'index', $item['Item']['id']), array('class' => 'button')); ?>
+			<?php echo $this->Html->link('View', array('controller' => 'items', 'action' => 'view', $item['Item']['id'])); ?>
+			<?php echo $this->Html->link(__('Inquire', true), array('controller' => 'emails', 'action' => 'index', $item['Item']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

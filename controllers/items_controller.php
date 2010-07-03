@@ -6,6 +6,7 @@ class ItemsController extends AppController {
 	function index() {
 		$this->Item->recursive = 1;
 		$this->set('items', $this->paginate());
+		$this->set('notes', $this->Item->Note->find('all'));
 	}
 
 	function view($id = null) {
@@ -14,6 +15,23 @@ class ItemsController extends AppController {
 			$this->redirect(array('action' => 'index'));
 		}
 		$this->set('item', $this->Item->read(null, $id));
+	}
+	
+	function category($id = null) {
+	    $category = null;
+	    if (!$id || ($category = $this->Item->Category->read(null, $id)) == false) {
+	        $this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
+	        $this->redirect(array('action' => 'index'));
+	    }
+
+	    $this->paginate = array(
+	        'conditions' => array('Category.id' => $id),
+	        'contain' => array('Category')
+	    );
+	    $this->Item->Behaviors->attach('Containable');
+	    $items = $this->paginate();
+	    $notes = $this->Item->Note->find('all');
+	    $this->set(compact('category', 'items', 'notes'));
 	}
 
 	function admin_index() {

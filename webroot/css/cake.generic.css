@@ -131,6 +131,7 @@ div.view {
 }
 div.actions {
 	float:left;
+	clear:left;
 	width:16%;
 	padding:10px 1.5%;
 }

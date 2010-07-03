@@ -373,13 +373,34 @@ h1 {
 	height:22px;
 	text-indent:-9999px;	
 }
-
-.inquire {
+.button {
 	display:block;
-	background:url(../img/but_readmore.png) 0 0 no-repeat;
+	background:url(../img/button.png) 0 0 no-repeat;
 	width:66px;
 	height:22px;
-	text-indent:-9999px;	
+	color: #fff;	
+	text-align; center;
+	font-size: 10px;
+	text-decoration: none;
+	font-family: Arial;
+	text-transform: uppercase;
+	font-weight: normal;
+	line-height: 22px;
+}
+.inquire {
+	display:block;
+	width:147px;
+	height:40px;
+	text-align:center;
+	padding-top:4px;
+	color:#fff;
+	margin-top:15px;
+	background:url(../img/but_submit.jpg) 0 0 no-repeat;
+	line-height: 28px;
+	font-size: 12px;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: bold;
 }
 
 .viewItem {
@@ -565,6 +586,10 @@ td {
 }
 td.actions {
 	text-align: center;
+	font-weight: bold;
+}
+td.actions a {
+	margin: 3px;
 }
 
 

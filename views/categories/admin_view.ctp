@@ -40,7 +40,8 @@
 		<th><?php __('Description'); ?></th>
 		<th><?php __('Picture File Name'); ?></th>
 		<th><?php __('Price'); ?></th>
-		<th><?php __('Category Id'); ?></th>
+		<th><?php __('Make'); ?></th>
+		<th><?php __('Model Number'); ?></th>
 		<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -57,7 +58,8 @@
 			<td><?php echo $item['description'];?></td>
 			<td><?php echo $item['picture_file_name'];?></td>
 			<td><?php echo $item['price'];?></td>
-			<td><?php echo $item['category_id'];?></td>
+			<td><?php echo $item['make'];?></td>
+			<td><?php echo $item['model_number'];?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View', true), array('controller' => 'items', 'action' => 'view', $item['id'])); ?>
 				<?php echo $this->Html->link(__('Edit', true), array('controller' => 'items', 'action' => 'edit', $item['id'])); ?>

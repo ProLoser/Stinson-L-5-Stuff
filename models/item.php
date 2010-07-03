@@ -31,7 +31,8 @@ class Item extends AppModel {
 	            'thumb' => '80x80'
 	          )
 	        )
-	      )
+	      ),
+		'Containable'
 	    );
 
 }

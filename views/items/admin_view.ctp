@@ -11,6 +11,13 @@
 			<?php echo $item['Item']['name']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Notes'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<ul><?php foreach ($item['Note'] as $note):?>
+				<li><?php echo $note['name']; ?></li>
+			<?php endforeach;?></ul>
+			<?php if (empty($item['Note'])) echo '&nbsp';?>
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Description'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $item['Item']['description']; ?>
@@ -26,6 +33,13 @@
 			<?php echo $this->Items->image($item); ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Categories'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<ul><?php foreach ($item['Category'] as $category):?>
+				<li><?php echo $category['name']; ?></li>
+			<?php endforeach;?></ul>
+			<?php if (empty($item['Category'])) echo '&nbsp';?>
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Price'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $item['Item']['price']; ?>
@@ -39,11 +53,6 @@
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Model Number'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $item['Item']['model_number']; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Category'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($item['Category']['name'], array('controller' => 'categories', 'action' => 'view', $item['Category']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>

@@ -5,7 +5,7 @@
 		<th><?php echo $this->Paginator->sort('name');?></th>
 		<th><?php echo $this->Paginator->sort('make');?></th>
 		<th><?php echo $this->Paginator->sort('model_number');?></th>
-		<th class="actions"><?php __('Inquire');?></th>
+		<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
 	$i = 0;
@@ -20,6 +20,7 @@
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
 		<td class="actions">
+			<?php echo $this->Html->link('View', array('controller' => 'items', 'action' => 'view', $item['Item']['id'])); ?>
 			<?php echo $this->Html->link(__('Inquire', true), array('controller' => 'emails', 'action' => 'index', $item['Item']['id'])); ?>
 		</td>
 	</tr>
@@ -38,4 +39,10 @@
  |
 		<?php echo $this->Paginator->next(__('next', true).' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
+	<h2>Notes</h2>
+	<ul>
+	<?php foreach($notes as $note):?>
+		<li><strong><?php echo $note['Note']['number'];?>:</strong> <?php echo $note['Note']['note']?></li>
+	<?php endforeach;?>
+	</ul>
 </div>

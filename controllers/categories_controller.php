@@ -3,17 +3,8 @@ class CategoriesController extends AppController {
 
 	var $name = 'Categories';
 
-	function index() {
-		$this->Category->recursive = 0;
-		$this->set('categories', $this->paginate());
-	}
-
 	function view($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->set('category', $this->Category->read(null, $id));
+		$this->redirect(array('controller' => 'items', 'action' => 'category', $id));
 	}
 
 	function admin_index() {
