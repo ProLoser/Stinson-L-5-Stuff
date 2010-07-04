@@ -55,7 +55,7 @@ class ItemsController extends AppController {
 		$items = $this->paginate();
 
 		$notes = $this->Item->Note->find('all');
-		$this->set(compact('category', 'items' ));
+		$this->set(compact('category', 'items', 'notes'));
 	}
 
 	function admin_index() {
