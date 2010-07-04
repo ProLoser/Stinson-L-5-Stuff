@@ -696,3 +696,7 @@ form input.submit {
 	clear: none;
 }
 
+.photo {
+	border: 6px solid #B7DCF1;
+	margin: 0 -6px;
+}

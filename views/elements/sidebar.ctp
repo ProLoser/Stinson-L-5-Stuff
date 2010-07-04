@@ -4,7 +4,7 @@
 	<li><?php echo $this->Html->link($category, array('controller' => 'categories', 'action' => 'view', $id, Inflector::slug($category)))?></li>
 	<?php endforeach;?>
 </ul>
-
+<?php echo $this->Html->image('small_plane_photo.jpg', array('class' => 'photo'))?>
 <!-- get in touch 
 <h2 class="home">Get in touch</h2>
 <p>I would be happy to hear from you. For contacting me please use the <?php echo $this->Html->link('contact page', array('controller' => 'emails', 'action' => 'index'))?> or the info bellow.</p>
