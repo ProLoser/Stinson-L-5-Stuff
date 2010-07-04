@@ -18,17 +18,44 @@ class ItemsController extends AppController {
 	}
 	
 	function category($id = null) {
-	    $category = null;
-	    if (!$id || ($category = $this->Item->Category->read(null, $id)) == false) {
-	        $this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
-	        $this->redirect(array('action' => 'index'));
-	    }
-		
-	    $this->paginate = array('contain' => array('Category'));
-	    $items = $this->paginate();
+		$category = null;
+		if (!$id) {
+			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$category = $this->Item->Category->find('first', array(
+			'conditions' => array('Category.id' => $id),
+			'contain' => false,
+		));
 
-	    //$notes = $this->Item->Note->find('all');
-	    $this->set(compact('category', 'items' ));
+		if (!$category) {
+			$this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
+			$this->redirect(array('action' => 'index'));
+		}
+
+		$this->Item->unbindModel(array('hasAndBelongsToMany' => array('Category')));
+		$this->Item->bindModel(array(
+			'hasOne' => array(
+				'CategoriesItem',
+				'FilterCategory' => array(
+					'className' => 'Category',
+					'foreignKey' => false,
+					'conditions' => array('FilterCategory.id = CategoriesItem.category_id')
+		))), false);
+
+		$this->paginate['Item'] = array(
+			'conditions' => array('FilterCategory.id' => $id),
+			'contain' => array('Category', 'CategoriesItem', 'FilterCategory'),
+			'fields' => array('Item.*')
+		);
+		$this->Item->recursive = -1;
+		$this->Item->Category->recursive = -1;
+		$this->Item->CategoriesItem->recursive = -1;
+		$this->Item->FilterCategory->recursive = -1;
+		$items = $this->paginate();
+
+		$notes = $this->Item->Note->find('all');
+		$this->set(compact('category', 'items' ));
 	}
 
 	function admin_index() {
