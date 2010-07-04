@@ -23,15 +23,12 @@ class ItemsController extends AppController {
 	        $this->Session->setFlash(sprintf(__('Invalid %s', true), 'category'));
 	        $this->redirect(array('action' => 'index'));
 	    }
-
-	    $this->paginate = array(
-	        'conditions' => array('Category.id' => $id),
-	        'contain' => array('Category')
-	    );
-	    $this->Item->Behaviors->attach('Containable');
+		
+	    $this->paginate = array('contain' => array('Category'));
 	    $items = $this->paginate();
-	    $notes = $this->Item->Note->find('all');
-	    $this->set(compact('category', 'items', 'notes'));
+
+	    //$notes = $this->Item->Note->find('all');
+	    $this->set(compact('category', 'items' ));
 	}
 
 	function admin_index() {

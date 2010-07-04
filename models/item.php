@@ -32,7 +32,6 @@ class Item extends AppModel {
 	          )
 	        )
 	      ),
-		'Containable'
 	    );
 
 }

@@ -3,7 +3,7 @@
 	<?php echo $this->Items->image($item); ?>
 	<?php echo $this->Items->inquire($item['Item']['id'])?>
 </div>
-<h2><?php echo ($item['Item']['price']) ? '$' . $item['Item']['price'] : 'To be Negotiated'?></h2>
+<h2><?php echo ($item['Item']['price'] != '0.00') ? '$' . $item['Item']['price'] : 'To be Negotiated'?></h2>
 <?php echo $item['Item']['description']; ?>
 <h3>Details</h3>
 <ul>
