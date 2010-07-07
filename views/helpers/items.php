@@ -59,7 +59,7 @@ class ItemsHelper extends AppHelper {
 	}
 	
 	function inquire($itemId) {
-		return $this->Html->link('Inquire', array('controller' => 'emails', 'action' => 'index', $itemId), array('class' => 'inquire'));
+		return $this->Html->link('Inquire', array('controller' => 'messages', 'action' => 'index', $itemId), array('class' => 'inquire'));
 	}
 	
 

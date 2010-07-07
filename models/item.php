@@ -19,7 +19,7 @@ class Item extends AppModel {
 	);
 
 	var $hasAndBelongsToMany = array(
-		'Email',
+		'Message',
 		'Category',
 		'Note'
 	);

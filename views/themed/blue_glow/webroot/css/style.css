@@ -657,14 +657,14 @@ form input.submit {
 	background:url(../img/bk_submit.jpg) 0 0 no-repeat;
 }
 
-.errormsg, .successmsg{
+.message, .error-message{
 	background:#FEF4F1;
 	border:1px solid #F7A68A;
 	color:#DA4310;
 	padding:10px;
 }
 
-.successmsg {
+.message {
 	background:#F5FAF1;
 	border:1px solid #C2E1AA;
 	color:#8FA943;

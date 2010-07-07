@@ -1,5 +1,5 @@
 <?php $this->set('title_for_layout', 'Contact Me')?>
-<?php echo $this->Form->create('Email', array('id' => 'contact'));?>
+<?php echo $this->Form->create('Message', array('url' => '/email', 'id' => 'contact'));?>
 	<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('email');

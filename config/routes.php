@@ -29,6 +29,6 @@
  */
 	Router::connect('/', array('controller' => 'items', 'action' => 'index'));
 	Router::connect('/about', array('controller' => 'pages', 'action' => 'index', 'about_me'));
-	Router::connect('/email/*', array('controller' => 'emails', 'action' => 'index'));
+	Router::connect('/email/*', array('controller' => 'messages', 'action' => 'index'));
 	Router::connect('/admin', array('admin' => true, 'controller' => 'items', 'action' => 'index'));
 ?>

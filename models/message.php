@@ -1,6 +1,7 @@
 <?php
-class Email extends AppModel {
-	var $name = 'Email';
+class Message extends AppModel {
+	var $name = 'Message';
+	var $order = 'Message.created ASC';
 	var $validate = array(
 		'name' => array(
 			'notempty' => array(
@@ -21,12 +22,6 @@ class Email extends AppModel {
 				'allowEmpty' => true,
 			),
 		),
-		'subject' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				'message' => 'Please enter a subject',
-			),
-		),
 		'message' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
@@ -36,21 +31,7 @@ class Email extends AppModel {
 	);
 
 	var $hasAndBelongsToMany = array(
-		'Item' => array(
-			'className' => 'Item',
-			'joinTable' => 'emails_items',
-			'foreignKey' => 'email_id',
-			'associationForeignKey' => 'item_id',
-			'unique' => true,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		)
+		'Item'
 	);
 
 }
