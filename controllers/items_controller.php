@@ -2,6 +2,9 @@
 class ItemsController extends AppController {
 
 	var $name = 'Items';
+	var $paginate = array(
+		'limit' => 25
+	);
 
 	function index() {
 		$this->Item->recursive = 1;
