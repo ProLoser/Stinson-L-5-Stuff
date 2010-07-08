@@ -11,10 +11,15 @@ th {
 }
 td {
 	border-left: 1px dotted #ccc;
+}
+tr.top td {
+	border-bottom: 1px dashed #ccc;
+}
+tr.bottom td {
 	border-bottom: 1px solid #000;
 }
 tr.altrow td {
-	border-bottom: 1px dashed #000;
+	background: #fafafa;
 }
 li {
 	margin: 10px 0;
@@ -37,24 +42,21 @@ li {
 	foreach ($items as $item):
 		$class = null;
 		if ($i++ % 2 == 0) {
-			$class = ' class="altrow"';
+			$class = ' altrow';
 		}
 	?>
-	<tr<?php echo $class?>>
-		<td><?php echo $item['Item']['name']?></td>
-		<td><?php echo $item['Item']['description']?></td>
-		<td><?php echo $item['Item']['make']?></td>
-		<td><?php echo $item['Item']['model_number']?></td>
-		<td><?php if ($item['Item']['price'] != 0.00) echo $item['Item']['price'];?></td>
-		<td><?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?></td>
-		<td><?php echo implode(', ', Set::extract('{n}/name', $item['Category']));?></td>
-		<td><?php echo count($item['Message'])?></td>
+	<tr class="top<?php echo $class?>">
+		<td><?php echo $item['Item']['name']?>&nbsp;</td>
+		<td><?php echo $item['Item']['make']?>&nbsp;</td>
+		<td><?php echo $item['Item']['model_number']?>&nbsp;</td>
+		<td><?php if ($item['Item']['price'] != 0.00) echo $item['Item']['price'];?>&nbsp;</td>
+		<td><?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?>&nbsp;</td>
+		<td><?php echo implode(', ', Set::extract('{n}/name', $item['Category']));?>&nbsp;</td>
+		<td><?php echo count($item['Message'])?>&nbsp;</td>
 	</tr>
-	<?php if (!empty($item['Item']['description'])):?>
-		<tr<?php echo $class?>>
-			<td colspan="7"><?php echo $item['Item']['description']?></td>
-		</tr>
-	<?php endif;?>
+	<tr class="bottom<?php echo $class?>">
+		<td colspan="7"><?php echo $item['Item']['description']?></td>
+	</tr>
 	<?php endforeach;?>
 </table>
 <h2>Notes</h2>
