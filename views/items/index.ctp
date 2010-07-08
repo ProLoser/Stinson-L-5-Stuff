@@ -20,13 +20,13 @@
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
 		<td class="img" rowspan="2">
-			<?php echo $this->Items->image($item); ?>
+			<?php if (!empty($item['Item']['picture_file_name'])) echo $this->Items->image($item); ?>
 		</td>
 	</tr>
 	<tr<?php echo $class;?>>
 		<td colspan="3">
 			<?php if (!empty($item['Note'])):?>
-				See Notes: <?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?>. 
+				<em>See note: <?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?>.</em> 
 			<?php endif;?>
 			<?php echo $item['Item']['description']; ?>&nbsp;
 		</td>

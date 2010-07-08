@@ -564,15 +564,13 @@ tr {
 	
 }
 tr.altrow {
-	background: #B7DCF1;;
-}
-table tr:nth-child(2n) td {
 	background: #B7DCF1;
 }
 th {
 	border-bottom: 2px solid #000;
 	padding: 6px;
 	font-size: 130%;
+	text-align: left;
 }
 th a.asc:after {
 	content: ' ⇣';
@@ -583,6 +581,9 @@ th a.desc:after {
 td {
 	padding: 6px;
 	border-bottom:1px solid #ddd;
+}
+tr.altrow td {
+	border-bottom:1px solid #fff;
 }
 td.img {
 	text-align: right;
