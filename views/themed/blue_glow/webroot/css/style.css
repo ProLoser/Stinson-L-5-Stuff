@@ -584,8 +584,14 @@ td {
 	padding: 6px;
 	border-bottom:1px solid #ddd;
 }
+td.img {
+	text-align: right;
+	width: 100px;
+}
+td.img img {
+	border:2px solid #000;
+}
 td.actions {
-	text-align: center;
 	font-weight: bold;
 }
 td.actions a {

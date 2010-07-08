@@ -12,6 +12,11 @@
 			<li><?php echo $this->Html->link($category['name'], array('controller' => 'categories', 'action' => 'view', $category['id'])); ?></li>
 		<?php endforeach;?></ul>
 	</li>
+<li><b>Notes:</b> 
+	<ul><?php foreach($item['Note'] as $note):?>
+		<li><?php echo $note['name']; ?></li>
+	<?php endforeach;?></ul>
+</li>
 <?php if (!empty($item['Item']['make'])):?>
 	<li><b>Make:</b> <?php echo $item['Item']['make']; ?></li>
 <?php endif;?>

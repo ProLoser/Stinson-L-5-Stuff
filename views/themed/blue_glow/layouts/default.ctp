@@ -36,13 +36,14 @@
 
 		echo $this->Html->css(array(
 			'style',
-			'jquery.lightbox-0.5'
+			'/js/fancybox/jquery.fancybox-1.3.1',
 		));
 		
 		echo $this->Html->script(array(
 			'jquery.min',
-			'stepcarousel',
-			'jquery.lightbox-0.5.min',
+			'fancybox/jquery.easing-1.3.pack',
+			'fancybox/jquery.mousewheel-3.0.2.pack',
+			'fancybox/jquery.fancybox-1.3.1.pack',
 			'plugins',
 		));
 
@@ -67,13 +68,13 @@
 		</div>
 	</div>
 	<div id="footer">
-		© 2009 BlueGlow.com. All Right Reserved.
-		<?php echo $this->Html->image('footer_mark.gif', array('class' => 'footerMark'));
-		echo $this->Html->link(
+		<p style="float: left">© 20010 StinsonL-5Stuff.com and Blosser Diversified. All Right Reserved.</p> 
+		<p style="float: right">Website created by <?php echo $this->Html->link('Dean Sofer', 'http://deansofer.com');?> using 
+		<?php echo $this->Html->link(
 			$this->Html->image('cake.power.gif', array('alt'=> __('CakePHP: the rapid development php framework', true), 'border' => '0')),
 			'http://www.cakephp.org/',
 			array('target' => '_blank', 'escape' => false)
-		); ?>
+		); ?></p>
 	</div>
 
 </body>
