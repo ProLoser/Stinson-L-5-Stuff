@@ -34,7 +34,7 @@ li {
 		<th>Model&nbsp;#</th>
 		<th>Price</th>
 		<th>Notes</th>
-		<th>Categories</th>
+		<th>Cat</th>
 		<th>Msgs</th>
 	</tr>
 	<?php
@@ -51,7 +51,7 @@ li {
 		<td><?php echo $item['Item']['model_number']?>&nbsp;</td>
 		<td><?php if ($item['Item']['price'] != 0.00) echo $item['Item']['price'];?>&nbsp;</td>
 		<td><?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?>&nbsp;</td>
-		<td><?php echo implode(', ', Set::extract('{n}/name', $item['Category']));?>&nbsp;</td>
+		<td><?php echo implode(', ', Set::extract('{n}/id', $item['Category']));?>&nbsp;</td>
 		<td><?php echo count($item['Message'])?>&nbsp;</td>
 	</tr>
 	<tr class="bottom<?php echo $class?>">
@@ -62,6 +62,13 @@ li {
 <h2>Notes</h2>
 <ul>
 <?php foreach($notes as $note):?>
-	<li><?php echo $note['Note']['name']?></li>
+	<li><b>(<?php echo $note['Note']['number']?>)</b> <?php echo $note['Note']['note']?></li>
+<?php endforeach;?>
+</ul>
+
+<h2>Categories</h2>
+<ul>
+<?php foreach($categories as $category):?>
+	<li><b>(<?php echo $category['Category']['id']?>)</b> <?php echo $category['Category']['name']?></li>
 <?php endforeach;?>
 </ul>
