@@ -76,6 +76,6 @@
 			array('target' => '_blank', 'escape' => false)
 		); ?></p>
 	</div>
-
+	<?php echo $this->element('analytics');?>
 </body>
 </html>

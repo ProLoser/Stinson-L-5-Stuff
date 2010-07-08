@@ -64,8 +64,6 @@ class PagesController extends AppController {
 				$this->Session->setFlash(sprintf(__('The %s could not be saved. Please, try again.', true), 'page'));
 			}
 		}
-		$locations = $this->Page->Location->find('list');
-		$this->set(compact('locations'));
 	}
 
 	function admin_edit($id = null) {
@@ -84,8 +82,6 @@ class PagesController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Page->read(null, $id);
 		}
-		$locations = $this->Page->Location->find('list');
-		$this->set(compact('locations'));
 	}
 
 	function admin_delete($id = null) {
