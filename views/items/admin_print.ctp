@@ -25,13 +25,12 @@ li {
 <table cellpadding="3px" cellspacing="0" width="100%">
 	<tr>
 		<th>Name</th>
-		<th>Description</th>
 		<th>Make</th>
 		<th>Model&nbsp;#</th>
 		<th>Price</th>
 		<th>Notes</th>
 		<th>Categories</th>
-		<th>Messages</th>
+		<th>Msgs</th>
 	</tr>
 	<?php
 	$i = 0;
@@ -46,11 +45,16 @@ li {
 		<td><?php echo $item['Item']['description']?></td>
 		<td><?php echo $item['Item']['make']?></td>
 		<td><?php echo $item['Item']['model_number']?></td>
-		<td><?php echo $item['Item']['price']?></td>
+		<td><?php if ($item['Item']['price'] != 0.00) echo $item['Item']['price'];?></td>
 		<td><?php echo implode(', ', Set::extract('{n}/number', $item['Note']));?></td>
 		<td><?php echo implode(', ', Set::extract('{n}/name', $item['Category']));?></td>
 		<td><?php echo count($item['Message'])?></td>
 	</tr>
+	<?php if (!empty($item['Item']['description'])):?>
+		<tr<?php echo $class?>>
+			<td colspan="7"><?php echo $item['Item']['description']?></td>
+		</tr>
+	<?php endif;?>
 	<?php endforeach;?>
 </table>
 <h2>Notes</h2>
