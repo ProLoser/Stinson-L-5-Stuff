@@ -68,7 +68,7 @@
 		</div>
 	</div>
 	<div id="footer">
-		<p style="float: left">© 20010 StinsonL-5Stuff.com and Blosser Diversified. All Right Reserved.</p> 
+		<p style="float: left">© 2010 StinsonL-5Stuff.com and Blosser Diversified. All Rights Reserved.</p> 
 		<p style="float: right">Website created by <?php echo $this->Html->link('Dean Sofer', 'http://deansofer.com');?> using 
 		<?php echo $this->Html->link(
 			$this->Html->image('cake.power.gif', array('alt'=> __('CakePHP: the rapid development php framework', true), 'border' => '0')),

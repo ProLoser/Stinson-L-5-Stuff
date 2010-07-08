@@ -15,5 +15,6 @@
 		<li><?php echo $this->Html->link('New Note', array('controller' => 'notes', 'action' => 'add'));?></li>
 		<li><?php echo $this->Html->link('New Information Page', array('controller' => 'pages', 'action' => 'add'));?></li>
 		<li><?php echo $this->Html->link('New Admin User', array('controller' => 'users', 'action' => 'add'));?></li>
+		<li><?php echo $this->Html->link('Print Items Report', array('controller' => 'items', 'action' => 'print'), array('target' => '_blank'));?></li>
 	</ul>
 </div>

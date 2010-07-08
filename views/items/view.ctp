@@ -1,6 +1,6 @@
 <?php $this->set('title_for_layout', $item['Item']['name']); ?>
 <div class="viewItem">
-	<?php echo $this->Items->image($item); ?>
+	<?php if (!empty($item['Item']['picture_file_name'])) echo $this->Items->image($item); ?>
 	<?php echo $this->Items->inquire($item['Item']['id'])?>
 </div>
 <h2><?php echo ($item['Item']['price'] != '0.00') ? '$' . $item['Item']['price'] : 'To be Negotiated'?></h2>

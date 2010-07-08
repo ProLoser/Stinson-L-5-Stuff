@@ -5,6 +5,7 @@
 			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('make');?></th>
 			<th><?php echo $this->Paginator->sort('model_number');?></th>
+			<th><?php echo $this->Paginator->sort('Order', 'order_weight');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -19,6 +20,7 @@
 		<td><?php echo $item['Item']['name']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
+		<td><?php echo $item['Item']['order_weight']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $item['Item']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $item['Item']['id'])); ?>

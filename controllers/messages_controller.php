@@ -17,6 +17,7 @@ class MessagesController extends AppController {
 				$this->set('items', $this->Message->Item->find('list'));
 				$this->set('data', $this->data);
 				if ($this->Email->send()) {
+					$this->Message->save($this->data);
 					$this->Session->setFlash('Thank you for contacting us');
 					$this->redirect('/');
 				} else {

@@ -65,6 +65,13 @@ class ItemsController extends AppController {
 		$this->Item->recursive = 0;
 		$this->set('items', $this->paginate());
 	}
+	
+	function admin_print() {
+		$this->Item->recursive = 1;
+		$items = $this->Item->find('all');
+		$notes = $this->Item->Note->find('all');
+		$this->set(compact('items', 'notes'));
+	}
 
 	function admin_view($id = null) {
 		if (!$id) {

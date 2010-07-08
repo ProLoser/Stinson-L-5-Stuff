@@ -1,4 +1,5 @@
 <?php $this->set('title_for_layout', 'Contact Me')?>
+<p><b>Fax:</b> (714) 526-5285</p>
 <?php echo $this->Form->create('Message', array('url' => '/email', 'id' => 'contact'));?>
 	<?php
 		echo $this->Form->input('name');

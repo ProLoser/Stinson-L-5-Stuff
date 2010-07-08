@@ -7,7 +7,7 @@
 		echo $this->Form->input('Note', array('multiple' => 'checkbox'));
 		echo $this->Form->input('description');
 		echo $this->Form->input('picture', array('type' => 'file'));
-		echo $this->Form->input('price', array('label' => 'Price (Leave 0.00 for TBD)', 'default' => '0.00'));
+		echo $this->Form->input('price', array('label' => 'Price: Leave 0.00 for TBD. Do not include the $ sign', 'default' => '0.00'));
 		echo $this->Form->input('make');
 		echo $this->Form->input('model_number');
 		echo $this->Form->input('Category', array('multiple' => 'checkbox'));
