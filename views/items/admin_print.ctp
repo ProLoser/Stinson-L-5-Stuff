@@ -46,7 +46,7 @@ li {
 		}
 	?>
 	<tr class="top<?php echo $class?>">
-		<td><?php echo $item['Item']['name']?>&nbsp;</td>
+		<td><strong><?php echo $item['Item']['name']?></strong>&nbsp;</td>
 		<td><?php echo $item['Item']['make']?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']?>&nbsp;</td>
 		<td><?php if ($item['Item']['price'] != 0.00) echo $item['Item']['price'];?>&nbsp;</td>
