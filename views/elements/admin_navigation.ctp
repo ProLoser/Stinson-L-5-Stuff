@@ -5,7 +5,7 @@
 		<li><?php echo $this->Html->link('Categories', array('controller' => 'categories', 'action' => 'index'));?></li>
 		<li><?php echo $this->Html->link('Notes', array('controller' => 'notes', 'action' => 'index'));?></li>
 		<li><?php echo $this->Html->link('Information Pages', array('controller' => 'pages', 'action' => 'index'));?></li>
-		<li><?php echo $this->Html->link('Emails', array('controller' => 'emails', 'action' => 'index'));?></li>
+		<li><?php echo $this->Html->link('Emails', array('controller' => 'messages', 'action' => 'index'));?></li>
 		<li><?php echo $this->Html->link('Administrators', array('controller' => 'users', 'action' => 'index'));?></li>
 	</ul>
 	<h3>Actions</h3>

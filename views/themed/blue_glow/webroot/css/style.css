@@ -52,6 +52,9 @@ h2 {
 	padding-top:0;
 	margin-bottom:5px;
 }
+#colRight input, #colRight select, #colRight textarea {
+	width: 100%;
+}
 
 h2.home {
 	border-bottom:1px solid #efefef;
@@ -705,5 +708,5 @@ form input.submit {
 
 .photo {
 	border: 6px solid #B7DCF1;
-	margin: 0 -6px;
+	margin: 0 -6px 20px -6px;
 }

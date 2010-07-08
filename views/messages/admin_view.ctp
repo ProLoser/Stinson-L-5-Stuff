@@ -1,34 +1,34 @@
-<div class="emails view">
-<h2><?php  __('Email');?></h2>
+<div class="messages view">
+<h2><?php  __('Message');?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Id'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['id']; ?>
+			<?php echo $message['Message']['id']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Name'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['name']; ?>
+			<?php echo $message['Message']['name']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Email'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['email']; ?>
+			<?php echo $message['Message']['email']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Phone'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['phone']; ?>
+			<?php echo $message['Message']['phone']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Subject'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['subject']; ?>
+			<?php echo $message['Message']['subject']; ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Message'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $email['Email']['message']; ?>
+			<?php echo $message['Message']['message']; ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -36,13 +36,13 @@
 <div class="actions">
 	<h3><?php __('Extra Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(sprintf(__('Edit this %s', true), __('Email', true)), array('action' => 'edit', $email['Email']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(sprintf(__('Delete this %s', true), __('Email', true)), array('action' => 'delete', $email['Email']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $email['Email']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Edit this %s', true), __('Message', true)), array('action' => 'edit', $message['Message']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(sprintf(__('Delete this %s', true), __('Message', true)), array('action' => 'delete', $message['Message']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $message['Message']['id'])); ?> </li>
 	</ul>
 </div>
 <div class="related">
 	<h3><?php printf(__('Related %s', true), __('Items', true));?></h3>
-	<?php if (!empty($email['Item'])):?>
+	<?php if (!empty($message['Item'])):?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php __('Id'); ?></th>
@@ -55,7 +55,7 @@
 	</tr>
 	<?php
 		$i = 0;
-		foreach ($email['Item'] as $item):
+		foreach ($message['Item'] as $item):
 			$class = null;
 			if ($i++ % 2 == 0) {
 				$class = ' class="altrow"';

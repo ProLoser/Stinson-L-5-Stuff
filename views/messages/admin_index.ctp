@@ -1,5 +1,5 @@
 <div class="emails index">
-	<h2><?php __('Emails');?></h2>
+	<h2><?php __('Messages');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -12,23 +12,23 @@
 	</tr>
 	<?php
 	$i = 0;
-	foreach ($emails as $email):
+	foreach ($messages as $message):
 		$class = null;
 		if ($i++ % 2 == 0) {
 			$class = ' class="altrow"';
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td><?php echo $email['Email']['id']; ?>&nbsp;</td>
-		<td><?php echo $email['Email']['name']; ?>&nbsp;</td>
-		<td><?php echo $email['Email']['email']; ?>&nbsp;</td>
-		<td><?php echo $email['Email']['phone']; ?>&nbsp;</td>
-		<td><?php echo $email['Email']['subject']; ?>&nbsp;</td>
-		<td><?php echo $email['Email']['message']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['id']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['name']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['email']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['phone']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['subject']; ?>&nbsp;</td>
+		<td><?php echo $message['Message']['message']; ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $email['Email']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $email['Email']['id'])); ?>
-			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $email['Email']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $email['Email']['id'])); ?>
+			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $message['Message']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $message['Message']['id'])); ?>
+			<?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $message['Message']['id']), null, sprintf(__('Are you sure you want to delete # %s?', true), $message['Message']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

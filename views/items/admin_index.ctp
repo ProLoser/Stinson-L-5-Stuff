@@ -2,7 +2,6 @@
 	<h2><?php __('Items');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('make');?></th>
 			<th><?php echo $this->Paginator->sort('model_number');?></th>
@@ -17,7 +16,6 @@
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td><?php echo $item['Item']['id']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['name']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>

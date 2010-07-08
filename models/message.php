@@ -13,6 +13,7 @@ class Message extends AppModel {
 			'email' => array(
 				'rule' => array('email'),
 				'message' => 'Please enter a valid email address',
+				'allowEmpty' => true,
 			),
 		),
 		'phone' => array(

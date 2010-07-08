@@ -21,7 +21,7 @@
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('View', array('controller' => 'items', 'action' => 'view', $item['Item']['id'])); ?>
-			<?php echo $this->Html->link(__('Inquire', true), array('controller' => 'emails', 'action' => 'index', $item['Item']['id'])); ?>
+			<?php echo $this->Html->link(__('Inquire', true), array('controller' => 'messages', 'action' => 'index', $item['Item']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

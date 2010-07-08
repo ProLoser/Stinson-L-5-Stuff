@@ -13,3 +13,5 @@
 </p>
 <p><strong>Email:</strong> <a href="mailto:#">office[at]blueglow[dot]com</a></p>
 -->
+<h2>Contact Me</h2>
+<p>Sorry for the inconvenience, the <?php echo $this->Html->link('contact form', array('controller' => 'messages', 'action' => 'index'))?> now works!</p>
