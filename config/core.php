@@ -21,7 +21,7 @@
  */
 
 /***** CUSTOM CONFIGURATION OPTIONS ******/
-Configure::write('CONTACT_EMAIL', 'stinsonl-5stuff@aol.com; deansofer@gmail.com');
+Configure::write('CONTACT_EMAIL', 'stinsonl5stuff@aol.com');
 
 
 /**
