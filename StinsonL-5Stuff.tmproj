@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>controllers/emails_controller.php</string>
+	<string>config/core.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -24,87 +24,118 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>216</integer>
+	<integer>295</integer>
 	<key>metaData</key>
 	<dict>
-		<key>controllers/emails_controller.php</key>
+		<key>config/core.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>27</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>29</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>13</integer>
+		</dict>
+		<key>controllers/items_controller.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>29</integer>
+				<key>line</key>
+				<integer>69</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>44</integer>
+		</dict>
+		<key>views/elements/admin_navigation.ctp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>54</integer>
+				<key>line</key>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>models/emailer.php</key>
+		<key>views/items/admin_index.ctp</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>50</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>7</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>views/emails/index.ctp</key>
+		<key>views/items/admin_print.ctp</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>32</integer>
+				<integer>7</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>64</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>19</integer>
 		</dict>
-		<key>views/themed/blue_glow/webroot/css/style.css</key>
+		<key>views/items/index.ctp</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>88</integer>
 				<key>line</key>
-				<integer>659</integer>
+				<integer>28</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>644</integer>
-		</dict>
-		<key>webroot/css.php</key>
-		<dict>
-			<key>caret</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>28</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>88</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>views/emails/index.ctp</string>
-		<string>webroot/css.php</string>
-		<string>views/themed/blue_glow/webroot/css/style.css</string>
-		<string>controllers/emails_controller.php</string>
-		<string>models/emailer.php</string>
+		<string>views/items/admin_print.ctp</string>
+		<string>config/core.php</string>
+		<string>views/items/index.ctp</string>
+		<string>controllers/items_controller.php</string>
+		<string>views/elements/admin_navigation.ctp</string>
+		<string>views/items/admin_index.ctp</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>

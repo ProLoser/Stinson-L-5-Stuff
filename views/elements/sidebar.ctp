@@ -1,16 +1,8 @@
 <h2>Categories</h2>
 <ul id="subCategs">
-	<li><?php echo $this->Html->link('All Items', array('controller' => 'items', 'action' => 'index'))?></li>
 	<?php foreach ($navCategories as $id => $category):?>
 	<li><?php echo $this->Html->link($category, array('controller' => 'items', 'action' => 'category', $id, Inflector::slug($category)))?></li>
 	<?php endforeach;?>
 </ul>
+<p>This website is dedicated to the preservation of the Stinson L-5 Sentinal WWII aircraft and Lycoming O-435 engine that was used in the L-5. Over the last 20 years I have collected a number of Stinson L-5 parts, propellers, tools and Lycoming O-435 engines and accessories and would like to find them a good home. Dick Blosser.</p>
 <?php echo $this->Html->image('small_plane_photo.jpg', array('class' => 'photo'))?>
-<!-- get in touch 
-<h2 class="home">Get in touch</h2>
-<p>I would be happy to hear from you. For contacting me please use the <?php echo $this->Html->link('contact page', array('controller' => 'emails', 'action' => 'index'))?> or the info bellow.</p>
-<p><strong>Phone:</strong> +123456789<br />
-<strong>Mobile:</strong> +123456789<br />
-</p>
-<p><strong>Email:</strong> <a href="mailto:#">office[at]blueglow[dot]com</a></p>
--->
