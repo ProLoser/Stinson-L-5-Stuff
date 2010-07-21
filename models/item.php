@@ -17,6 +17,10 @@ class Item extends AppModel {
 			),
 		),
 	);
+	
+	var $virtualFields = array(
+		'full_name' => 'CONCAT(Item.name, ": ", Item.model_number)',
+	);
 
 	var $hasAndBelongsToMany = array(
 		'Message',

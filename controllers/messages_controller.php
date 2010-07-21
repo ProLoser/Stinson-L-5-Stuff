@@ -30,7 +30,7 @@ class MessagesController extends AppController {
 		if (isset($id)) {
 			$this->data['Item']['Item'] = explode(',', $id);
 		}
-		$items = $this->Message->Item->find('list');
+		$items = $this->Message->Item->find('list', array('fields' => array('full_name')));
 		$this->set(compact('items'));
 	}
 
