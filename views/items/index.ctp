@@ -16,7 +16,7 @@
 		}
 	?>
 	<tr<?php echo $class;?>>
-		<td class="actions"><?php echo $this->Html->link($item['Item']['name'], array('controller' => 'items', 'action' => 'view', $item['Item']['id'])); ?>&nbsp;</td>
+		<td class="actions"><?php echo $this->Html->link($item['Item']['name'], array('controller' => 'items', 'action' => 'view', $item['Item']['id'], Inflector::slug($item['Item']['name']))); ?>&nbsp;</td>
 		<td><?php echo $item['Item']['make']; ?>&nbsp;</td>
 		<td><?php echo $item['Item']['model_number']; ?>&nbsp;</td>
 		<td class="img" rowspan="2">
