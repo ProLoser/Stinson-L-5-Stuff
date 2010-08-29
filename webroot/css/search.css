@@ -68,9 +68,9 @@ input.gsc-search-button {
   width: auto;
   font-family: inherit;
   font-size: 15px;
-  color: #ffffff;
+  color: #119EC8;
   font-weight: bold;
-  text-shadow: 0 1px 2px #000000;
+  text-shadow: 0 1px 1px #000000;
   padding: 3px 8px 4px 8px;
   background: #F9F9F9;
   border: 1px solid;
@@ -89,7 +89,7 @@ div.gsc-clear-button {
 .gsc-tabHeader {
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 0 1px 2px #000000;
+  text-shadow: 0 1px 1px #000000;
   padding: 2px 8px 0 8px;
 }
 /* Inactive tab */
